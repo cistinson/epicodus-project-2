@@ -1,0 +1,55 @@
+.loginWrapper{
+  background-color: #111111;
+  height: 100vh;
+  padding: 5em;
+}
+
+.loginTitleWrapper{
+  background-color: #00b894;
+  padding: 3em;
+  color: #111111;
+}
+
+.loginTitleWrapper h1{
+  font-family: 'Lobster';
+}
+
+.loginInfoWrapper{
+  background-color: #55efc4;
+  padding: 3em;
+  font-family: 'Lobster';
+}
+
+.loginInfoWrapper hr{
+  border-top: 2px solid #111111;
+}
+
+.loginInfoWrapper label{
+  font-size: 1.5em;
+}
+
+.loginInfoWrapper input{
+  margin-bottom: 1em;
+}
+
+.loggedInWrapper{
+  background-color: lightcoral;
+  display: none;
+  height: 100vh;
+}
+
+#loginSubmit{
+  padding: 1em 1.5em;
+  font-size: 1.2em;
+}
+
+#loginSubmit:hover{
+  background-color: #111111;
+  color: #ffffff;
+}
+ 
+/*Overriding Bootstrap CSS*/
+
+.row{
+  margin: 0;
+}
