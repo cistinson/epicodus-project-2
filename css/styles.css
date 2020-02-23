@@ -5,7 +5,7 @@
 }
 
 .loginTitleWrapper{
-  background-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.55);
   padding: 3em;
   color: #111111;
   /*border: 5px solid #ff7675;*/
@@ -21,6 +21,7 @@
 .loginTitleWrapper p{
   font-family: 'Noto Sans TC';
   font-size: 3em;
+  font-weight: bold;
 }
 
 .loginInfoWrapper{
@@ -55,6 +56,7 @@
   background-color: lightcoral;
   display: none;
   height: 100vh;
+  font-family: 'Noto Sans TC';
 }
 
 #loginSubmit{
@@ -63,6 +65,8 @@
   font-family: 'Noto Sans TC';
   border-radius: 0.25em;
   border: 2px solid #111111;
+  background-color: #3498db;
+  color: #ffffff;
 }
 
 #loginSubmit:hover{
@@ -72,6 +76,80 @@
   font-weight: bold;
 }
  
+.loggedInTitleWrapper{
+  background-color: #f8f8ff; 
+  padding: 1em;
+}
+
+.loggedInTitleWrapper h1{
+  font-family: 'Lobster';
+  font-size: 3.5em;
+  text-shadow: 2px 2px #3498db;
+}
+
+.userInformationWrapper{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.userInformationWrapper p{
+  margin: 0;
+}
+
+#usernamePlaceholder{
+  font-size: 1.5em;
+}
+
+#logoutSubmit{
+  padding: .5em 0.75em;
+  font-size: 1.2em;
+  border-radius: 0.25em;
+  color: #ffffff;
+  border: 2px solid #3498db;
+  background-color: #111111;
+  margin-left: 1em
+}
+
+#logoutSubmit:hover{
+  background-color: #3498db;
+  color: #ffffff;
+  border: 2px solid #111111;
+  font-weight: bold;
+}
+
+nav{
+  background-color: #111111;
+  border-bottom: 2px solid #3498db;
+  border-top: 2px solid #3498db;
+}
+
+.navList{
+  color: #ffffff;
+  background-color: #111111;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 2em;
+}
+
+.navList li{
+  margin-right: 1.5em;
+  font-size: 1.5em;
+}
+
+.navList li a{
+  padding: 0.65em;
+  display: block;
+  color: #ffffff;
+}
+
+.navList li a:hover{
+  text-decoration: none;
+  background-color: #333333;
+}
+
 /*Overriding Bootstrap CSS*/
 
 .row{
