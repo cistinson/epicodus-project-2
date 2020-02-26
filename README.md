@@ -1,4 +1,4 @@
-# Programming Language Selector
+# Programming Language Suggester
 
 Author: Chris Stinson
 
