@@ -13,8 +13,8 @@
     <div id="bodyWrapper">
       <div class="row loginWrapper">
         <div class="col-sm-12 col-md-6 col-lg-8 loginTitleWrapper">
-          <h1>Rocket League Champions</h1>
-          <p>If you want to improve at Rocket League you&rsquo;ve come to the right place.</p>
+          <h1>Programming Language Suggester</h1>
+          <p>Want to learn a new programming language, but now sure which one is right for you? You’ve come to the right place.</p>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4 loginInfoWrapper">
           <h2>Sign In</h2>
@@ -24,7 +24,7 @@
             <input type="text" id="username" name="username" required><br>
             <label>Password:</label><br>
             <input type="password" id="password" name="password" required><br>
-            <button id="loginSubmit">Submit</button>
+            <button id="loginSubmit" type="button">Submit</button>
           </form> 
           <p>*Please note this website is not secure and is being used for illustrative purposes only. Do not enter accurate personal information.</p>
         </div>
@@ -32,28 +32,133 @@
       <div class="row loggedInWrapper">
         <div class="row loggedInTitleWrapper">
           <div class="col-sm-6 col-md-7 col-lg-8">
-            <h1>Rocket League Champions</h1>
+            <h1>Programming Language Suggester</h1>
           </div>
           <div class="col-sm-6 col-md-5 col-lg-4 userInformationWrapper">
-            <p><span id="usernamePlaceholder"></span><br /><strong>Current Rank:</strong> <span id="rankPlaceholder"></span></p>
-            <button id="logoutSubmit">Logout</button>
+            <p>Welcome, <span id="usernamePlaceholder"></span>!
+              <!--<br /><strong>Current Rank:</strong> <span id="rankPlaceholder"></span>--></p>
+            <button id="logoutSubmit" type="button">Logout</button>
           </div>
         </div>      
         <nav>
           <ul class="navList">
-            <li><a href="#">Tips &amp; Tricks</a></li>
-            <li><a href="#">Rank Tier List</a></li>
-            <li><a href="#">Top Players</a></li>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Find My Language</a></li>
           </ul>
         </nav>
-        <div class="col-sm-6 col-md-7 col-lg-8">
-
-        </div>
-        <div class="col-sm-6 col-md-5 col-lg-4">
-          
+        <div class="loggedInContentWrapper">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <h2>Overview</h2>
+              <p>Our hope is that by learning a little more about you, we can help determine the programming language that fits you best. While there are dozens of languages, our tool focuses on some of the most common:</p>
+              <ul>
+                <li>Ruby</li>
+                <li>C#</li>
+                <li>JavaScript</li>
+                <li>Go</li>
+                <li>Python</li>
+                <li>Rust</li>
+                <li>Swift</li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row mt-4">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <h2>Find My Language</h2>
+              <p>Please fill out the below questions.</p>
+              <form id="questionForm">
+                <div class="form-group">
+                  <label>How many continents have you visited?</label>
+                  <select class="form-control" id="questionOne">
+                    <option value="0"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Do you live in a rural or urban area?</label>
+                  <select class="form-control" id="questionTwo">
+                    <option value="0"></option>
+                    <option value="1">Rural</option>
+                    <option value="2">Urban</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Which of these hobbies do you like the most?</label>
+                  <select class="form-control" id="questionThree">
+                    <option value="0"></option>
+                    <option value="1">Hiking</option>
+                    <option value="2">Running</option>
+                    <option value="3">Sewing</option>
+                    <option value="4">Basketball</option>
+                    <option value="5">Netflix</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Do you have an internet connection faster than 100 MB/S?</label>
+                  <select class="form-control" id="questionFour">
+                    <option value="0"></option>
+                    <option value="1">No</option>
+                    <option value="2">Yes</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Which of these movies do you like the most?</label>
+                  <select class="form-control" id="questionFive">
+                    <option value="0"></option>
+                    <option value="1">300</option>
+                    <option value="2">Elf</option>
+                    <option value="3">Parasite</option>
+                    <option value="4">Jumper</option>                    
+                  </select>
+                </div>
+                <button id="submitScore" type="submit">Submit</button>
+              </form>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="outputWrapper">
+                <h2>The language that best suites you is...</h2>
+                <div class="outputOption outputRuby">
+                  <h2>Ruby</h2>
+                </div>
+                <div class="outputOption outputCSharp">              
+                  <h2>C#</h2>
+                </div> 
+                <div class="outputOption outputJavaScript">               
+                  <h2>JavaScript</h2>
+                </div> 
+                <div class="outputOption outputGo">             
+                  <h2>Go</h2>
+                </div> 
+                <div class="outputOption outputPython">              
+                  <h2>Python</h2>
+                </div> 
+                <div class="outputOption outputRust">               
+                  <h2>Rust</h2>
+                </div> 
+                <div class="outputOption outputSwift">               
+                  <h2>Swift</h2>
+                </div>  
+              </div>                               
+            </div>    
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <p>Stinson Design</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <footer>
+
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>

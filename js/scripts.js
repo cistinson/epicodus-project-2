@@ -13,11 +13,10 @@ $(document).ready(function() {
   var password;
   var usernamePlaceholder = $("#usernamePlaceholder");
 
-  //Declaring rank options
-
-  var rank;
-  var rankOptions = ['Bronze 1', 'Bronze 2', 'Bronze 3', 'Silver 1', 'Silver 2', 'Silver 3', 'Gold 1', 'Gold 2', 'Gold 3', 'Platinum 1', 'Platinum 2', 'Platinum 3', 'Diamond 1', 'Diamond 2', 'Diamond 3', 'Champion 1', 'Champion 2', 'Champion 3', 'Grand Champion'];
-  var rankPlaceholder = $("#rankPlaceholder");
+  //Declaring score and selected language variables
+  var aggregateScore;
+  var selectedLanguage;
+  var outputWrapper = $("")
 
   //Moves user to logged in screen
   loginClick.click(function(){
@@ -29,7 +28,6 @@ $(document).ready(function() {
       loggedInWrapper.show();
       usernamePlaceholder.text(username);   
     } 
-    generateRank();
   });
 
   //Moves user to logged out screen
@@ -41,10 +39,62 @@ $(document).ready(function() {
     $("#password").val('');
   });
 
-  //Generates random number for rank array
-  function generateRank(){
-    rank = Math.floor(Math.random() * 19);
-    rankPlaceholder.text(rankOptions[rank]);
+  //Calculates score and language on form submit
+  $("#questionForm").submit(function(){
+    calculateScore();
+    determineLanguage();
+    event.preventDefault();    
+  });
+
+  function calculateScore(){
+
+    //Obtain corresponding values from selected values
+    var questionOneValue = parseInt($("select#questionOne option:selected").val());
+    var questionTwoValue = parseInt($("select#questionTwo option:selected").val());
+    var questionThreeValue = parseInt($("select#questionThree option:selected").val());
+    var questionFourValue = parseInt($("select#questionFour option:selected").val());
+    var questionFiveValue = parseInt($("select#questionFive option:selected").val());
+
+    //Checks to ensure each question has been answered
+    if (questionOneValue !== 0 && questionTwoValue !==0 && questionThreeValue !== 0 && questionFourValue !==0 && questionFiveValue !==0){
+      aggregateScore = questionOneValue + questionTwoValue + questionThreeValue + questionFourValue + questionFiveValue;      
+    } else{
+      alert("Please ensure you've answered all questions.");
+    }
+  }
+
+  function determineLanguage(){
+    //Hide all previously shown results if user resubmits
+    $(".outputOption").hide();
+    //Displays output wrapper
+    $(".outputWrapper").show();
+
+    //Displays language based on score results
+    if (aggregateScore === 5){
+      console.log(aggregateScore);
+      $(".outputRuby").show();
+    } else if (aggregateScore > 5 && aggregateScore < 8){
+      console.log(aggregateScore);
+      $(".outputCSharp").show();
+    } else if (aggregateScore > 7 && aggregateScore < 10){
+      console.log(aggregateScore);
+      $(".outputJavaScript").show();
+    } else if (aggregateScore > 9 && aggregateScore < 13){
+      console.log(aggregateScore);
+      $(".outputGo").show();
+    } else if (aggregateScore > 12 && aggregateScore < 16){
+      console.log(aggregateScore);
+      $(".outputPython").show();
+    } else if (aggregateScore > 15 && aggregateScore < 18){
+      console.log(aggregateScore);
+      $(".outputRust").show();
+    } else if (aggregateScore > 17 && aggregateScore < 21){
+      console.log(aggregateScore);
+      $(".outputSwift").show();
+    }
+
+    alert(aggregateScore);
+
   }
 
 });
