@@ -72,19 +72,19 @@ $(document).ready(function() {
 
     //Displays language based on score results
     if (aggregateScore === 5){
-      $(".outputRuby").show();
+      $(".outputRuby").fadeIn();
     } else if (aggregateScore > 5 && aggregateScore < 8){
-      $(".outputCSharp").show();
+      $(".outputCSharp").fadeIn();
     } else if (aggregateScore > 7 && aggregateScore < 10){
-      $(".outputJavaScript").show();
+      $(".outputJavaScript").fadeIn();
     } else if (aggregateScore > 9 && aggregateScore < 13){
-      $(".outputGo").show();
+      $(".outputGo").fadeIn();
     } else if (aggregateScore > 12 && aggregateScore < 16){
-      $(".outputPython").show();
+      $(".outputPython").fadeIn();
     } else if (aggregateScore > 15 && aggregateScore < 18){
-      $(".outputRust").show();
+      $(".outputRust").fadeIn();
     } else if (aggregateScore > 17 && aggregateScore < 21){
-      $(".outputSwift").show();
+      $(".outputSwift").fadeIn();
     }
   }
 
