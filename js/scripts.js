@@ -48,7 +48,7 @@ $(document).ready(function() {
 
   function calculateScore(){
 
-    //Obtain corresponding values from selected values
+    //Obtain corresponding values from selected options
     var questionOneValue = parseInt($("select#questionOne option:selected").val());
     var questionTwoValue = parseInt($("select#questionTwo option:selected").val());
     var questionThreeValue = parseInt($("select#questionThree option:selected").val());
@@ -66,35 +66,26 @@ $(document).ready(function() {
   function determineLanguage(){
     //Hide all previously shown results if user resubmits
     $(".outputOption").hide();
+
     //Displays output wrapper
     $(".outputWrapper").show();
 
     //Displays language based on score results
     if (aggregateScore === 5){
-      console.log(aggregateScore);
       $(".outputRuby").show();
     } else if (aggregateScore > 5 && aggregateScore < 8){
-      console.log(aggregateScore);
       $(".outputCSharp").show();
     } else if (aggregateScore > 7 && aggregateScore < 10){
-      console.log(aggregateScore);
       $(".outputJavaScript").show();
     } else if (aggregateScore > 9 && aggregateScore < 13){
-      console.log(aggregateScore);
       $(".outputGo").show();
     } else if (aggregateScore > 12 && aggregateScore < 16){
-      console.log(aggregateScore);
       $(".outputPython").show();
     } else if (aggregateScore > 15 && aggregateScore < 18){
-      console.log(aggregateScore);
       $(".outputRust").show();
     } else if (aggregateScore > 17 && aggregateScore < 21){
-      console.log(aggregateScore);
       $(".outputSwift").show();
     }
-
-    alert(aggregateScore);
-
   }
 
 });
